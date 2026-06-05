@@ -23,7 +23,6 @@
 }
 </script>
 <style>
-<style>
 :root{
   --navy:#0e1b2c;
   --navy-2:#0a1521;
@@ -298,8 +297,6 @@ footer{background:var(--navy);color:#aebccd;padding:54px 24px 28px;}
 .mobile-menu{display:none;background:var(--navy-2);border-bottom:3px solid var(--gold);}
 .mobile-menu.open{display:block;}
 .mobile-menu a{display:block;padding:14px 26px;color:#e7ecf2;font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.05em;border-top:1px solid rgba(255,255,255,.06);}
-</style>
-
 
 /* ---- SERVICE PAGE ---- */
 .svc-hero{background:var(--navy);color:#fff;padding:70px 24px 60px;text-align:center;border-bottom:3px solid var(--gold);}
@@ -390,8 +387,7 @@ footer{background:var(--navy);color:#aebccd;padding:54px 24px 28px;}
       <p>Safety and care come first on every job. Tell us what you need removed and we'll walk you through the process.</p>
     </div>
     <div class="svc-img">
-      <img src="images/demo-1.jpg" alt="Light demolition services in Corpus Christi" onerror="this.style.display='none';this.parentNode.querySelector('.ph').style.display='block';">
-      <div class="ph" style="display:none;">Add your photo here:<br>images/service-light-demolition.jpg</div>
+      <img src="images/demo-1.jpg" alt="Light demolition services in Corpus Christi">
     </div>
   </div>
 
@@ -482,22 +478,6 @@ footer{background:var(--navy);color:#aebccd;padding:54px 24px 28px;}
 
 
 <script>
-const testimonials=[
-  {q:'"Excellent service! CD Dumpster & Disposal showed up on time and made the whole cleanup process so easy. Being locally owned and operated, they take pride in their work and it shows. Highly recommend!"',n:'– Maria G.'},
-  {q:'"Fast, fair pricing and zero hassle. The dumpster was dropped exactly where I needed it and picked up the next day. Will absolutely use them again for my next project."',n:'– James R.'},
-  {q:'"We use CD Dumpster for all of our construction site cleanups. Reliable, professional, and always on schedule. Best dumpster company in the Coastal Bend."',n:'– Tony M.'},
-  {q:'"They handled a big demolition job at my rental property and left the site spotless. Great communication from start to finish. Highly recommend this hard-working local crew!"',n:'– Sandra L.'}
-];
-let ti=0;
-const dots=document.getElementById('tdots');
-testimonials.forEach((_,i)=>{const b=document.createElement('button');b.className='t-dot'+(i===0?' active':'');b.onclick=()=>{ti=i;render();};dots.appendChild(b);});
-function render(){
-  document.getElementById('tq').innerHTML=testimonials[ti].q;
-  document.getElementById('tn').textContent=testimonials[ti].n;
-  [...dots.children].forEach((d,i)=>d.classList.toggle('active',i===ti));
-}
-function tStep(d){ti=(ti+d+testimonials.length)%testimonials.length;render();}
-setInterval(()=>tStep(1),6000);
 
 /* close mobile menu on link tap */
 (function(){
@@ -520,8 +500,5 @@ setInterval(()=>tStep(1),6000);
   setTimeout(openPop,1200);
 })();
 </script>
-</body>
-</html>
-
 </body>
 </html>
