@@ -635,13 +635,15 @@ footer{background:var(--navy);color:#aebccd;padding:54px 24px 28px;}
         <iframe title="CD Dumpster & Disposal service area map" width="100%" height="240" style="border:0;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?ll=27.75,-97.75&z=9&output=embed"></iframe>
       </div>
     </div>
-    <form onsubmit="event.preventDefault();this.reset();alert('Thanks! We\'ll be in touch shortly.');">
+    <form action="https://formspree.io/f/meewezoo" method="POST">
       <div class="row">
-        <div><label>Name *</label><input required placeholder="Your name"></div>
-        <div><label>Phone *</label><input required placeholder="Your phone"></div>
+        <div><label>Name *</label><input name="name" required placeholder="Your name"></div>
+        <div><label>Phone *</label><input name="phone" required placeholder="Your phone"></div>
       </div>
-      <div class="full"><label>Email</label><input type="email" placeholder="Your email"></div>
-      <div class="full"><label>How can we help?</label><textarea placeholder="Tell us about your project..."></textarea></div>
+      <div class="full"><label>Email</label><input type="email" name="email" placeholder="Your email"></div>
+      <div class="full"><label>How can we help?</label><textarea name="message" placeholder="Tell us about your project..."></textarea></div>
+      <input type="hidden" name="_subject" value="New Quote Request - CD Dumpster & Disposal">
+      <input type="text" name="_gotcha" style="display:none">
       <button class="btn btn-red" type="submit">Request a Quote</button>
     </form>
   </div>
